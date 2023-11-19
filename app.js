@@ -5,15 +5,15 @@ async function getData(selected_major) {
         var data = await response.json();
 
         // filter data array for the selected meal
-        meal_items = data.filter( (item) => item.major == selected_major );  
+        student_items = data.filter( (item) => item.major == selected_major );  
 
-       var templateText = document.getElementById('menuTemplate').innerHTML;
+       var templateText = document.getElementById('majorTemplate').innerHTML;
        var compiledTemplateText = Handlebars.compile(templateText);   // get and compile template code
-       compiledHtml = compiledTemplateText({ rows: meal_items })      // apply data to template
-       document.getElementById('menuTable').innerHTML = compiledHtml; 
+       compiledHtml = compiledTemplateText({ rows: student_items })      // apply data to template
+       document.getElementById('majorTable').innerHTML = compiledHtml; 
     }
     else {
-       document.querySelector('#menuTable').innerHTML = "There was an error, or menu items not found";
+       document.querySelector('#majorTable').innerHTML = "There was an error, or menu items not found";
     }	
  
 }
