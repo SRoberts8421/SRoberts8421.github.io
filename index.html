@@ -16,12 +16,11 @@
   <body>
   
       <div class="container">
-         <h2>Select a Menu 1.1</h2>
+         <h2>Select a Menu 1.2</h2>
       
          <div style='padding: 5px;'>    
             <button type='button' class="btn btn-primary" onClick="getData('CIT')">Breakfast</button> 
-            <button type='button' class="btn btn-primary" onClick="getData('BUS')">Lunch</button> 
-            <button type='button' class="btn btn-primary" onClick="getData('dinner')">Dinner</button> 
+            <button type='button' class="btn btn-primary" onClick="getData('BUS')">Lunch</button>  
          </div>
       
   
@@ -42,7 +41,7 @@
       <tr><th>Item</th><th>Meal</th><th>Category</th><th>Portion</th></tr>
       {{#each rows}}
          <tr>
-            <td>{{name}}</td><td>{{meal}}</td><td>{{category}}</td><td>{{portion}}</td>
+            <td>{{name}}</td><td>{{major}}</td><td>{{midterm}}</td><td>{{final}}</td>
          </tr>
       {{/each}}
    </table>
